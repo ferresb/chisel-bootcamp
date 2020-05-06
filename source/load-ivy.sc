@@ -180,3 +180,7 @@ def visualizeHierarchy(gen: () => chisel3.RawModule): Unit = {
     html(instanceView)
 }
 
+def debug(str: String)(implicit debug: Boolean): Unit = {
+    if (debug) { println(str) }
+}
+
